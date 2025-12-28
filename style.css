@@ -113,7 +113,7 @@ body {
 
 .table-elements span,
 .transaction-item span {
-  flex: 1; /* equal width columns */
+  flex: 1;
   text-align: center;
 }
 
@@ -167,6 +167,10 @@ body {
     width: 30%;
   }
 }
+.transaction-history-container {
+  margin-top: 40px;
+  text-align: center;
+}
 
 .task-input {
   width: 100%;
@@ -175,3 +179,65 @@ body {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+
+body.dark {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark .income,
+body.dark .expense,
+body.dark .balance,
+body.dark .transaction-history-container,
+body.dark .table-elements,
+body.dark .ul-elements {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+body.dark input,
+body.dark select {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border: 1px solid #444;
+}
+
+body.dark .add-trans-btn {
+  background-color: #0d6efd;
+}
+
+body.dark .transaction-item {
+  border-bottom: 1px solid #333;
+}
+
+.theme-toggle-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+
+  border: none;
+  cursor: pointer;
+
+  background-color: #222;
+  color: #fff;
+  font-size: 20px;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.theme-toggle-btn:hover {
+  transform: scale(1.05);
+}
+
+body.dark .theme-toggle-btn {
+  background-color: #f1f1f1;
+  color: #222;
+}
+body.dark .income { border-left: 4px solid #2ecc71; }
+body.dark .expense { border-left: 4px solid #e74c3c; }
+body.dark .balance { border-left: 4px solid #3498db; }
