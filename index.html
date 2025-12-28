@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="main-container">
+    <h1 class="main-heading">Expense Tracker</h1>
+    <div class="income-expense-balance-container">
+      <div class="income-expense-balance-box income">
+        <h3>Income</h3>
+        <p id="incomeParagraph">₹ 0</p>
+      </div>
+
+      <div class="income-expense-balance-box expense">
+        <h3>Expense</h3>
+        <p id="expenseParagraph">₹ 0</p>
+      </div>
+
+      <div class="income-expense-balance-box balance">
+        <h3>Balance</h3>
+        <p id="balanceParagraph">₹ 0</p>
+      </div>
+    </div>
+    <h1 class="transaction-heading">Transaction Form</h1>
+    <form id="transactionForm">
+        <input required type="text" id="taskInput" placeholder="Enter task description" class="task-input" />
+        <input required type="number" id="amountInput" placeholder="Enter amount" class="task-input" />
+        <select id="typeSelect" class="task-input">
+          <option value="income">Income</option>
+          <option value="expense">Expense</option>
+        </select>
+        <input required class="task-input" type="date" id="dateInput" placeholder="Enter date" />
+        <button class="add-trans-btn" type="submit" id="addTransactionButton">Add Transaction</button>
+
+      </form>
+
+      <div class="transaction-history-container">
+        <h3>Transaction History</h3>
+        <div class="table-elements">
+          <span>Id</span>
+          <span>Title</span>
+          <span>Amount</span>
+          <span>Type</span>
+          <span>Date</span>
+          <span>Action</span>
+
+        </div>
+
+        <ul id="transactionsElements" class="ul-elements">
+            <!-- Transaction items will be appended here dynamically -->
+          </ul>
+      </div>
+
+  </div>
+
+  
+
+  <script src="app.js"></script>
+</body>
+</html>
